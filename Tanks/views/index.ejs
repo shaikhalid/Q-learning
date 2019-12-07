@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Tanks</title>
+    <meta charset="UTF-8" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      .theme  {
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 3%;
+        height: 85vmin;
+        border: 2px solid white;
+      }
+
+      #console {
+        display: flex;    
+        flex-direction: column;
+        width: 200px;
+        color: white;
+        padding: 3%;
+      }
+
+      .hyperparameters  {
+        color: white;
+        width: 200px;
+      }
+
+      img {
+        display: none;
+      }
+      body {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        background-color: black;
+      }
+    </style>
+    
+
+    
+  </head>
+
+  <body>
+    <canvas id="gameScreen" class="theme" width="800" height="640"></canvas>
+    <div id="console" class="theme"></div>
+    <div class="hyperparameters theme">
+      Randomness
+      <div class="randomness">
+        <button id="ri">+</button>
+        <p id="randomness">0.2</p>
+        <button id="rd">-</button>
+      </div>
+    </div>
+    <p id='qt' hidden><%= jason %></p>
+    <script src="index.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+  
+  </body>
+</html>
